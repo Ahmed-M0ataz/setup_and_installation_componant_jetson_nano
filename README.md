@@ -1,0 +1,1 @@
+# setup_and_installation_componant_jetson_nano
