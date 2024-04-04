@@ -66,7 +66,26 @@ you need to install realsense ros .
                 catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
                 catkin_make install
         ```
+## Error when publish point cloud 
 
+
+Error is when make 
+```bash
+roslaunch realsense2_camera rs_camera.launch filters:=pointcloud
+```
+error is
+```bash
+No stream match for pointcloud chosen texture Process - Color
+```
+this error like i undeerstand mean that the computer can`t make computation power for calculating point cloud
+to solve this issue i read 2 solutions
+1. is reduce resolution for publish images
+2. reduce the depth image complexity 
+i choose second solution that work for me
+to reduce complexity use `filters` be `decimation`
+```bash
+roslaunch realsense2_camera rs_camera.launch filters:=pointcloud,decimation
+```
 ## install from source 
 this way becouse realsense debain not support KERNAL 4.9.337
 
