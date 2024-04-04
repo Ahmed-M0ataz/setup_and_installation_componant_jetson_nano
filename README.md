@@ -142,3 +142,16 @@ export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/pyrealsense2
 ```bash
 source ~/.bahrc
 ```
+# install vs code on jetson nano
+
+to install it not install latest version becouse not work
+
+you can install `version 1.50.0`
+this version not give error
+
+```bash
+
+wget https://update.code.visualstudio.com/1.50.0/linux-deb-arm64/stable -O stable.deb
+
+sudo dpkg -i stable.deb
+```
